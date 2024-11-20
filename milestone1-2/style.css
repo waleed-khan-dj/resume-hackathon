@@ -1,0 +1,128 @@
+*{
+  box-sizing: border-box;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightyellow;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .resume-container {
+    width: 70%;
+    background: white;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #2e1c52, #64327dc7);
+    color: white;
+  }
+  
+  .profile-pic {
+    width: 100px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+  }
+  
+  .resume-content {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 30%;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  
+  .main-content {
+    width: 70%;
+    padding: 20px;
+  }
+  
+  .resume-section {
+    margin-bottom: 20px;
+  }
+
+  .resume-section p {
+    word-wrap: break-word; /* Break long words (like emails) */
+    overflow-wrap: break-word; /* For better browser support */
+  }
+  
+  h2 {
+    color: #490bc5b6;
+    border-bottom: 2px solid #490bc5b6;
+    padding-bottom: 5px;
+  }
+  
+  .action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;  /* Center the buttons horizontally */
+    align-items: center;      /* Vertically center buttons */
+    gap: 10px;                /* Space between buttons */
+    flex-wrap: wrap;          
+  }
+  
+  button {
+    padding: 10px 15px;
+    background: #490bc5b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    
+  }
+  
+  button:hover {
+    background: #38059dd0;
+  }
+  
+  @media print {
+    .action-buttons {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .resume-content {
+      flex-direction: column;
+    }
+    .sidebar, .main-content {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 570px) {
+    .profile-pic {
+      width: 80px; 
+      height: 80px; 
+    }
+  
+    .resume-header {
+      flex-direction: column;
+      align-items: center; 
+    }
+  
+    .resume-header .name {
+      font-size: 24px; 
+    }
+  
+    .resume-header .job-title {
+      font-size: 16px; 
+    }
+  }
+  
